@@ -1,0 +1,48 @@
+<van-toast id="van-toast" />
+<van-row>
+  <van-col span="10" offset="9">
+    <view class="userimage">
+      <van-image round width="3rem" height="3rem" fit="cover" src="{{user.avatarUrl}}" />
+    </view>
+  </van-col>
+</van-row>
+
+<van-cell-group>
+  <van-field
+    value="{{ myclass }}"
+    required
+    clearable
+    label="班级"
+    placeholder="例：软件工程18-01"
+    bind:change="classChange"
+  />
+  <van-field
+    value="{{ username }}"
+    clearable
+    label="姓名"
+    placeholder="请输入姓名"
+    required
+    bind:change="usernameChange"
+  />
+  <van-field
+    value="{{ number }}"
+    clearable
+    label="学号"
+    placeholder="请输入学号"
+    required
+    type="number"
+    bind:change="numberChange"
+  />
+</van-cell-group>
+
+<view class="confirm">
+<van-row >
+  <van-col span="20" offset="2" >
+    <van-button block type="info" bind:click="onConfirm">确认修改</van-button>
+  </van-col>
+</van-row>
+</view>
+
+
+
+

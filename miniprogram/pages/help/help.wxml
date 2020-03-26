@@ -1,0 +1,14 @@
+<van-collapse value="{{ activeNames }}" border="{{border}}" bind:change="onChange">
+  <van-collapse-item title="创建活动" name="1">
+    首页点击“创建活动”，输入活动标题和结束时间即可创建新活动。
+  </van-collapse-item>
+  <van-collapse-item title="活动设置" name="2">
+ <text> 活动人数：默认不限，选择自定义人数可限制活动单次参加人数，超过该人数的活动成员报名会提示失败。\n 允许创建者手动添加成员：活动结束后活动创建者可在活动详情页面通过学号手动添加成员。\n 指定地点签到：活动成员必须在指定的地点和半径内才能签到成功。（ 开启此功能需要获取手机定位，请确保手机GPS已打开，以及授权小程序获取您的位置 ） </text>  
+  </van-collapse-item>
+  <van-collapse-item title="参加活动" name="3">
+    可直接打开微信“扫一扫”扫描活动二维码参与活动，也可在小程序页面点击“参加活动”扫码参与活动。
+  </van-collapse-item>
+  <van-collapse-item title="活动详情" name="4">
+    在”活动列表“中，“我创建的”活动下，点击”详情“可查看活动详情、邀请其他人加入活动、手动添加成员。
+  </van-collapse-item>
+</van-collapse>

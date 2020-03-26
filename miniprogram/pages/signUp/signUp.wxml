@@ -1,0 +1,27 @@
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+
+<van-card tag="{{activity.score}}积分" price="{{activity.people}}" title="{{activity.activeTitle}}" thumb="{{ imageURL }}" thumb-mode="scaleToFill" currency="限制活动人数：" price-class="card-price">
+	<view slot="desc">
+		<view class="mytext">
+			<view wx:if="{{activity.activeRules===''}}"> 暂无简介</view>
+			<view wx:else>{{activity.activeRules}}</view>
+			<view wx:if="{{activity.location===''}}">
+				<van-icon name="location-o" /> 无地点限制
+			</view>
+			<view wx:else>
+				<van-icon name="location-o" /> {{activity.location}} </view>
+			<view>
+				<van-icon name="clock-o" /> {{activity.startTime}}--{{activity.endTime}}</view>
+		</view>
+	</view>
+</van-card>
+<view class="mybutton" wx:if="{{activity.startDate > time}}">
+	<van-button disabled round type="info" size="large" bind:click="onConfirm">活动未开始</van-button>
+</view>
+<view class="mybutton" wx:if="{{activity.endDate < time}}">
+	<van-button disabled round type="info" size="large" bind:click="onConfirm">活动已结束</van-button>
+</view>
+<view class="mybutton" wx:if="{{activity.startDate < time && activity.endDate > time }}">
+	<van-button round type="info" size="large" bind:click="onConfirm">确认参加</van-button>
+</view>

@@ -1,0 +1,8 @@
+.myimage {
+  height: 100px;
+  width: 100px;
+}
+.mytext{
+  text-align: center;
+  padding: 70px
+}

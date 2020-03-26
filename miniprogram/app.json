@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userInfo/userInfo",
+    "pages/record/record",
+    "pages/changeInfo/changeInfo",
+    "pages/createEvent/createEvent",
+    "pages/activityDetail/activityDetail",
+    "pages/signUp/signUp",
+    "pages/help/help",
+    "pages/about/about"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位" 
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "校园活动助理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/zhuye.png",
+        "selectedIconPath": "images/zhuye-active.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "活动",
+        "iconPath": "images/jilu.png",
+        "selectedIconPath": "images/jilu-active.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "我的",
+        "iconPath": "images/geren.png",
+        "selectedIconPath": "images/geren-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,69 @@
+<van-tabs animated sticky active="{{ active }}" >
+  <van-tab title="我创建的">
+    <view wx:if="{{created.length===0}}">
+      <view class="myicon">
+        <van-icon name="https://s2.ax1x.com/2020/03/05/37w9JI.png" size="90px" />
+      </view>
+      <view class="mytips">还没有创建活动</view>
+    </view>
+    <view wx:for="{{created}}" wx:key="index">
+    <van-card
+    tag="{{item.score}}积分"
+    price="{{item.people}}"
+    title="{{item.activeTitle}}"
+    thumb="{{ imageURL }}"
+    thumb-mode="scaleToFill"
+    currency="限制活动人数："
+    price-class="card-price"
+>
+  <view slot="desc">
+    <view class="mytext">
+    <view wx:if="{{item.activeRules===''}}"> 暂无简介</view>
+    <view wx:else>{{item.activeRules}}</view>
+    <view wx:if="{{item.location===''}}">
+      <van-icon name="location-o" /> 无地点限制 
+    </view>
+    <view wx:else><van-icon name="location-o" /> {{item.location}} </view>
+    <view><van-icon name="clock-o" /> {{item.startTime}}--{{item.endTime}}</view>
+    </view>
+  </view>
+  <view slot="footer">
+    <van-button data-id="{{item._id}}" size="small" plain type="info" onclick="onActivityDetail" >详情</van-button>
+  </view>
+</van-card>
+    </view>
+
+  </van-tab>
+
+  <van-tab title="我参加的">
+    <view wx:if="{{attendActivity.length===0}}">
+      <view class="myicon">
+        <van-icon name="https://s2.ax1x.com/2020/03/05/37w9JI.png" size="90px" />
+      </view>
+      <view class="mytips">你还没有参加过活动哦～</view>
+    </view>
+    <view wx:for="{{attendActivity}}">
+<van-card
+    tag="{{item.attendActivitys[0].score}}积分"
+    price="{{item.attendActivitys[0].people}}"
+    title="{{item.attendActivitys[0].activeTitle}}"
+    thumb="{{ imageURL }}"
+    thumb-mode="scaleToFill"
+    currency="活动人数："
+    price-class="card-price"
+>
+  <view slot="desc">
+    <view class="mytext">
+    <view wx:if="{{item.attendActivitys[0].activeRules===''}}"> 暂无简介</view>
+    <view wx:else>{{item.attendActivitys[0].activeRules}}</view>
+    <view wx:if="{{item.attendActivitys[0].location===''}}">
+      <van-icon name="location-o" /> 无地点限制 
+    </view>
+    <view wx:else><van-icon name="location-o" /> {{item.attendActivitys[0].location}} </view>
+    <view><van-icon name="clock-o" /> {{item.attendActivitys[0].startTime}}--{{item.attendActivitys[0].endTime}}</view>
+    </view>
+  </view>
+</van-card>
+    </view>
+  </van-tab>
+</van-tabs>

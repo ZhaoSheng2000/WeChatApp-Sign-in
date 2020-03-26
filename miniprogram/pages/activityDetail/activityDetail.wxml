@@ -1,0 +1,82 @@
+<van-notify id="van-notify" />
+<van-toast id="van-toast" />
+
+ <van-card
+    tag="{{activityDetail.score}}积分"
+    price="{{activityDetail.people}}"
+    title="{{activityDetail.activeTitle}}"
+    thumb="{{ imageURL }}"
+    thumb-mode="scaleToFill"
+    currency="限制活动人数："
+    price-class="card-price"
+>
+  <view slot="desc">
+    <view class="mytext">
+    <view wx:if="{{activityDetail.activeRules===''}}"> 暂无简介</view>
+    <view wx:else>{{activityDetail.activeRules}}</view>
+    <view wx:if="{{activityDetail.location===''}}">
+      <van-icon name="location-o" /> 无地点限制 
+    </view>
+    <view wx:else><van-icon name="location-o" /> {{activityDetail.location}} </view>
+    <view><van-icon name="clock-o" /> {{activityDetail.startTime}}--{{activityDetail.endTime}}</view>
+    <view wx:if="{{activityDetail.ifAdd}}"><van-icon name="friends-o" />允许手动添加成员</view>
+    <view wx:if="{{!activityDetail.ifAdd}}"><van-icon name="friends-o" />禁止手动添加成员</view>
+    </view>
+  </view>
+</van-card>
+
+<van-tabs sticky active="{{ active }}">
+<van-tab title="邀请加入" name="invite">
+    <view class="qrcode"> 
+     <van-image
+        width="270"
+        height="270"
+        src="{{qrcode}}"
+      />
+    </view>
+   <view class="scantext">微信“扫一扫”，加入活动</view>
+</van-tab>
+  <van-tab title="已参加成员" name="attend">
+      <van-grid column-num="4" border="{{ false }}">
+      <van-grid-item use-slot wx:for="{{ attendList }}" wx:key="index">
+          <van-image
+            round
+            width="4rem"
+            height="4rem"
+            src="{{item.avatarUrl}}"
+          />
+          {{item.username}}
+      </van-grid-item>
+      </van-grid>
+  </van-tab>
+  <van-tab title="手动添加" name="add">
+    <view wx:if="{{!activityDetail.ifAdd}}">
+      <view class="mytips">您已禁止手动添加活动成员</view>
+    </view>
+    <view wx:else>
+    <van-search value="{{ studentID }}" placeholder="请输入学号" bind:change='onStudentID' bind:search="onSearch" />
+    <view wx:if="{{addStudent}}">
+     <van-row>
+        <van-col span="5" offset="1">
+          <van-image
+          round
+          width="4rem"
+          height="4rem"
+          src="{{addStudent.avatarUrl}}"
+            />
+        </van-col>
+        <van-col span="12">
+          <text class="addstudent">{{addStudent.myclass}} {{addStudent.username}}</text>
+          <view class="addstudent">{{addStudent.number}}</view>
+        </van-col>
+        <van-col span="4">
+          <view class="student-btn">
+          <van-button plain size="small" type="primary" bind:click="onStudentAdd">添加</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+     
+    </view>
+  </van-tab>
+</van-tabs>

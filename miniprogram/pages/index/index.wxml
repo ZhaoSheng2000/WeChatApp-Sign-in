@@ -1,0 +1,10 @@
+<van-dialog id="van-dialog" />
+
+<view class="mytext">
+  <van-image width="100" height="100" bind:click="addEvent" src="https://s2.ax1x.com/2020/03/05/37U1yD.png" />
+  <view>创建活动</view>
+</view>
+<view class="mytext">
+  <van-image width="100" height="100" bind:click="signEvent" src="https://s2.ax1x.com/2020/03/05/37U3Oe.png" />
+  <view>参加活动</view>
+</view>

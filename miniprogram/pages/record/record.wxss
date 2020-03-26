@@ -1,0 +1,21 @@
+.myicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+}
+
+.mytips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3a386c;
+}
+.mytext{
+  color: #3a3a386c
+}
+.card-price{
+  font-size: 12px !important;
+  color: #3a3a386c !important
+}

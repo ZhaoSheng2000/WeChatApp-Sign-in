@@ -1,0 +1,42 @@
+page {
+  background: #f6f6f6;
+}
+
+.userinfo {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.nickname {
+  padding-top: 20rpx;
+}
+
+.change {
+  float: right;
+}
+
+.number {
+  font-size: 14px;
+  color: #a6b1e1;
+}
+
+.myclass {
+  color: #424874;
+}
+
+.confirm {
+  padding: 10px;
+  text-align: center;
+}
+
+.mytext {
+  font-size: 12px;
+  text-align: left;
+}
+
+.mybotton{
+  padding-top: 50px
+}
+.more{
+  padding-top: 50px
+}

@@ -1,0 +1,6 @@
+.userimage{
+padding: 15px;
+}
+.confirm{
+  padding-top: 20px
+}

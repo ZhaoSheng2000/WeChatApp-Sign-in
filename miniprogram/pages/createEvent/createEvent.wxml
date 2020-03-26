@@ -1,0 +1,125 @@
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+
+<van-cell-group>
+  <van-field
+    clearable
+    required
+    value="{{ activeTitle }}"
+    placeholder="请输入活动标题"
+    bind:change="onTitle"
+  />
+
+  <van-field
+    clearable
+    value="{{ activeRules }}"
+    type="textarea"
+    placeholder="请输入活动备注（选填）"
+    autosize
+    bind:change="onRules"
+  />
+
+  <van-cell title="活动人数" icon="friends-o" value="{{ activePeople }}" is-link  bind:click="setMan"/>
+
+  <van-field wx:if="{{activePeople==='自定义'}}"
+    value="{{ people }}"
+    required
+    clearable
+    input-align="right"
+    label="参与人数上限"
+    type="number"
+    placeholder="请输入人数"
+    bind:change="onPeopleChange"
+  />
+
+  <van-field 
+    value="{{ score }}"
+    clearable
+    input-align="right"
+    left-icon="records"
+    label="活动分值"
+    type="number"
+    placeholder="默认为空"
+    bind:change="onScoreChange"
+  />
+
+  <van-cell title="开始时间" icon="clock-o" value="{{startTime}}" is-link bind:click="showSetStartTime"/>
+    <van-popup 
+      show="{{ startTimeShow }}"
+      bind:close="onClose"
+      position="bottom"
+      custom-style="height: 40%;"
+    >
+      <van-datetime-picker
+       show-toolbar="{{toolbar}}"
+        type="datetime"
+        value="{{ startDate }}"
+        min-date="{{ minDate }}"
+        max-date="{{ maxDate }}"
+        bind:input="onStartTimeInput"
+      />
+    </van-popup>
+    <van-cell title="结束时间" icon="clock-o" value="{{endTime}}" is-link bind:click="setEndTime"/>
+    <van-popup 
+      show="{{ endTimeShow }}"
+      bind:close="onClose"
+      position="bottom"
+      custom-style="height: 40%;"
+    >
+      <van-datetime-picker
+        show-toolbar="{{toolbar}}"
+        type="datetime"
+        value="{{ endDate }}"
+        min-date="{{ startDate }}"
+        max-date="{{ maxDate }}"
+        bind:input="onEndTimeInput"
+      />
+    </van-popup>
+
+<van-cell use-label-slot title="允许创建者手动添加成员"  icon="manager-o">
+  <van-switch checked="{{ ifAdd }}" size="20px"
+ bind:change="ifAdd" />
+</van-cell>
+
+<van-cell use-label-slot title="指定地点内签到"  icon="location-o">
+  <van-switch checked="{{ ifLocation }}" size="20px"
+ bind:change="ifLocation" />
+</van-cell>
+
+  <van-field wx:if="{{ifLocation}}"
+    value="{{ location }}"
+    label="签到地点"
+    input-align="right"
+    bind:focus="setLocation"
+    use-button-slot
+  >
+   <van-button slot="button" size="small" type="info" bind:click="setLocation">点击设置</van-button>
+</van-field>
+  <van-field wx:if="{{ifLocation}}"
+    value="{{ locationRange }}"
+    label="设置签到范围"
+    placeholder="建议≥50m"
+    type="number"
+    input-align="right"
+    right-icon="question-o"
+    bind:click-icon="rangeTips"
+    bind:change="onLocationRange"
+  />
+</van-cell-group>
+<view class="mybutton">
+  <van-button block type="info"  bind:click="onConfirm">确认创建</van-button>
+</view>
+
+
+<van-popup 
+  show="{{ show }}"
+  bind:close="onClose"
+  position="bottom"
+  custom-style="height: 40%;"
+ >
+ <van-picker
+  columns="{{ columns }}"
+  default-index="{{ 0 }}"
+  bind:change="onChange"
+/>
+ </van-popup>

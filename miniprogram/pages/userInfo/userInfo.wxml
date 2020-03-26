@@ -1,0 +1,43 @@
+<view class="userinfo">
+  <van-row>
+    <van-col span="4" offset="2">
+      <van-image round width="4rem" height="4rem" src="{{user.avatarUrl}}" />
+    </van-col>
+    <view class="nickname">
+      <van-col span="16" offset="2">
+        <van-button hairline plain size="small" type="info" wx:if="{{!user}}" open-type="getUserInfo" bind:getuserinfo="getuserinfo">完善个人信息</van-button>
+        <view class="myclass">{{user.myclass}} {{user.username}}</view>
+        <view class="number">{{user.number}}</view>
+        <view class="change" wx:if="{{user}}">
+          <van-button hairline piain round type="warning" size="mini" bind:click="changeInfo">修改</van-button>
+        </view>
+      </van-col>
+    </view>
+  </van-row>
+</view>
+<view class="more">
+  <van-cell-group title="更多">
+    <van-cell icon="question-o" title="使用帮助" is-link bind:click="onHelp" />
+    <van-cell icon="notes-o" title="关于" is-link bind:click="onAbout" />
+    <van-cell icon="good-job-o" title="赞赏支持" is-link bind:click="onSupport" />
+  </van-cell-group>
+</view>
+
+
+<view class="mybotton">
+  <van-button hairline block icon="edit" open-type="feedback" type="default">意见反馈</van-button>
+</view>
+
+
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 50%;" bind:close="onClose">
+  <van-cell-group>
+    <van-field value="{{ myclass }}" required clearable label="班级" placeholder="例：软件工程18-01" bind:change="classChange" />
+
+    <van-field value="{{ username }}" clearable label="姓名" placeholder="请输入姓名" required bind:change="usernameChange" />
+    <van-field value="{{ number }}" clearable label="学号" placeholder="请输入学号" required type="number" bind:change="numberChange" />
+   
+      <van-button class="change" block type="info" bind:click="onConfirm">保存</van-button>
+ 
+  </van-cell-group>
+</van-popup>
+<van-toast id="van-toast" />

@@ -1,0 +1,12 @@
+.title {
+  font-size: 16px;
+  text-align: center;
+  color: #454545;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.mytext {
+  font-size: 14px;
+}
+

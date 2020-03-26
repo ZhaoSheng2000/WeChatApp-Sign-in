@@ -1,0 +1,140 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wx5d7f7e3f84c39ef4",
+	"projectname": "qiandao",
+	"libVersion": "2.10.3",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/userInfo",
+					"pathName": "pages/userInfo/userInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changeInfo/changeInfo",
+					"pathName": "pages/changeInfo/changeInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/record/record",
+					"pathName": "pages/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/createEvent/createEvent",
+					"pathName": "pages/createEvent/createEvent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/activityDetail/activityDetail",
+					"pathName": "pages/activityDetail/activityDetail",
+					"query": "id=JChwtiRy80xiaEOb2HF6s00sXyhyRbLZ",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "加入活动测试",
+					"pathName": "pages/signUp/signUp",
+					"query": "scene=O3dzMrasoT9fTPmtqoMIeFUsnIBQbkT9",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "扫码补签",
+					"pathName": "pages/signUp/signUp",
+					"query": "scene=jXNx2B6A4dTBLiYYOHnUJvOyCoJptxNv",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地理位置",
+					"pathName": "pages/signUp/signUp",
+					"query": "scene=M0UxzYA8sXAWQkwMnXV0maOh18coJC8c",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地点签到测试",
+					"pathName": "pages/signUp/signUp",
+					"query": "scene=aDEaa0IOaIGQLschQlIYfIsPGPU3YePm",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地点精度测试",
+					"pathName": "pages/signUp/signUp",
+					"query": "scene=1fB5cFWKjOnPqhIkZ1yDbWZsLeiY4Vxv",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activityDetail/activityDetail",
+					"pathName": "pages/activityDetail/activityDetail",
+					"query": "scene=1fB5cFWKjOnPqhIkZ1yDbWZsLeiY4Vxv",
+					"scene": null
+				}
+			]
+		}
+	}
+}
