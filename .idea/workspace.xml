@@ -1,23 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bab96a6-d281-419a-8ff6-55ebf848856d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZtczRZ35RD5Ei0d8NhTdjacU2u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bab96a6-d281-419a-8ff6-55ebf848856d" name="Default Changelist" comment="" />
+      <created>1585662093095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585662093095</updated>
+      <workItem from="1585662094882" duration="1215000" />
+    </task>
+    <task id="LOCAL-00001" summary="完善签到逻辑，修复按钮显示问题">
+      <created>1585662290885</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585662290886</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完善签到逻辑，修复按钮显示问题">
+      <created>1585662307536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585662307536</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完善签到逻辑，修复按钮显示问题">
+      <created>1585662395088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585662395088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完善签到逻辑，修复按钮显示问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善签到逻辑，修复按钮显示问题" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="234" y="4" key="CommitChangelistDialog2" timestamp="1585662307321">
+    <state x="234" y="4" key="CommitChangelistDialog2" timestamp="1585662394872">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="4" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585662307321" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1585662314374">
+    <state x="234" y="4" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585662394872" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1585662546847">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1585662314374" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1585662546847" />
   </component>
 </project>
